@@ -32,9 +32,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
-  void _incrementCounter() {
+  void _deccrementCounter() {
     setState(() {
-      _counter++;
+      _counter--;
     });
   }
 
@@ -57,7 +57,9 @@ class _MyHomePageState extends State<MyHomePage> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(25.0))),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            _deccrementCounter();
+                          },
                           icon: Icon(Icons.add, color: Colors.white),
                         )),
                   ),
